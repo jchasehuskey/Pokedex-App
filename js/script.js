@@ -57,65 +57,46 @@ console.log(pokemonList[1].type);
 console.log(pokemonList[4].height);
 //output - 0.4               //this is on the 'Mew" pokemon
 
-for (let i = 0; i < pokemonList.length; i++) {
-  if (pokemonList[i].height > 8) {
-    document.write(
-      pokemonList[i].name +
-        ' ' +
-        '(height:' +
-        pokemonList[i].height +
-        ') ' +
-        "-Wow that's big! <br/>"
-    );
-  } else {
-    document.write(
-      pokemonList[i].name + ' ' + '(height:' + pokemonList[i].height + ') <br/>'
-    );
-  }
-}
+//for Loop
 
-// //Loops
-
-// for (let i = 1; i <= 100; i++) {
-//   console.log(i);
-// }
-
-// let ages = [20, 30, 25, 22, 31];
-// for (let i = 0; i < ages.length; i++) {
-//   console.log(ages[i] - 2);
-// }
-
-// for (let i = 1; i <= 5; i++) {
-//   console.log(i);
-// }
-
-// let personAges = [
-//   { name: 'Chase', age: 26 },
-//   { name: 'Peter', age: 23 },
-//   { name: 'Ryan', age: 43 },
-// ];
-
-// //for loop - for the array above
-// for (let i = 0; i < personAges.length; i++) {
-//   if (personAges[i].age <= 23 && personAges[i].age >= 17) {
-//     console.log(personAges[i].name + ' is a young adult');
-//   } else if (personAges[i].age >= 23 && personAges[i].age < 43) {
-//     console.log(personAges[i].name + ' is a man in the prime of his life');
-//   } else if (personAges[i].age >= 43) {
-//     console.log(personAges[i].name + ' is older than the rest of his friends');
+// for (let i = 0; i < pokemonList.length; i++) {
+//   if (pokemonList[i].height > 8) {
+//     document.write(
+//       '<p>' +
+//         pokemonList[i].name +
+//         ' ' +
+//         '(height:' +
+//         pokemonList[i].height +
+//         ') ' +
+//         "-Wow that's big! </p>"
+//     );
+//   } else {
+//     document.write(
+//       '<p>' +
+//         pokemonList[i].name +
+//         ' ' +
+//         '(height:' +
+//         pokemonList[i].height +
+//         ') </p>'
+//     );
 //   }
 // }
 
-// //while loop
-// let i = 1;
-// while (i < 5) {
-//   console.log(i);
-//   i++;
-// }
+// document.write('<div class="new_prod_box">');
 
-// //do..while loop
+//1.5 - create forEach() function instead of forloop for pokemonList
 
-// do {
-//   console.log(i);
-//   i++;
-// } while (i < 5);
+pokemonList.forEach(function (pokemon) {
+  if (pokemon.height > 8) {
+    document.write(
+      '<p>' +
+        pokemon.name +
+        ' (height: ' +
+        pokemon.height +
+        ') ' +
+        "-Wow that's big!"
+    );
+  } else {
+    document.write('<p>' + pokemon.name + ' (height: ' + pokemon.height + ') ');
+  }
+});
