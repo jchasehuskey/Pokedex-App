@@ -40,22 +40,22 @@
 
 // // console.log(mixedArray[2][1]);
 
-const pokemonList = [
-  { name: 'Charzard', height: 0.6, type: ['Blaze', 'Solar-Power'] },
+// let pokemonList = [
+//   { name: 'Charzard', height: 0.6, type: ['Blaze', 'Solar-Power'] },
 
-  { name: 'Onix', height: 8.8, type: ['Sturdy', 'Rock-head', 'Weak-armor'] },
+//   { name: 'Onix', height: 8.8, type: ['Sturdy', 'Rock-head', 'Weak-armor'] },
 
-  { name: 'Persion', height: 0.5, type: ['Limber', 'Technician', 'Unnverve'] },
+//   { name: 'Persion', height: 0.5, type: ['Limber', 'Technician', 'Unnverve'] },
 
-  { name: 'Squirtle', height: 0.5, type: ['Rain-dish', 'Torrent'] },
+//   { name: 'Squirtle', height: 0.5, type: ['Rain-dish', 'Torrent'] },
 
-  { name: 'Mew', height: 0.4, type: ['Synchronize'] },
-];
+//   { name: 'Mew', height: 0.4, type: ['Synchronize'] },
+// ];
 
-console.log(pokemonList[1].type);
-//output - 'sturdy, 'rock-head', 'weak-armor'
-console.log(pokemonList[4].height);
-//output - 0.4               //this is on the 'Mew" pokemon
+// console.log(pokemonList[1].type);
+// //output - 'sturdy, 'rock-head', 'weak-armor'
+// console.log(pokemonList[4].height);
+// //output - 0.4               //this is on the 'Mew" pokemon
 
 //for Loop
 
@@ -86,7 +86,58 @@ console.log(pokemonList[4].height);
 
 //1.5 - create forEach() function instead of forloop for pokemonList
 
-pokemonList.forEach(function (pokemon) {
+// pokemonList.forEach(function (pokemon) {
+//   if (pokemon.height > 8) {
+//     document.write(
+//       '<p>' +
+//         pokemon.name +
+//         ' (height: ' +
+//         pokemon.height +
+//         ') ' +
+//         "-Wow that's big!"
+//     );
+//   } else {
+//     document.write('<p>' + pokemon.name + ' (height: ' + pokemon.height + ') ');
+//   }
+// });
+
+let pokemonRepository = (function () {
+  let pokemonList = [
+    { name: 'Charzard', height: 0.6, type: ['Blaze', 'Solar-Power'] },
+
+    { name: 'Onix', height: 8.8, type: ['Sturdy', 'Rock-head', 'Weak-armor'] },
+
+    {
+      name: 'Persion',
+      height: 0.5,
+      type: ['Limber', 'Technician', 'Unnverve'],
+    },
+
+    { name: 'Squirtle', height: 0.5, type: ['Rain-dish', 'Torrent'] },
+
+    { name: 'Mew', height: 0.4, type: ['Synchronize'] },
+  ];
+
+  function add(pokemon) {
+    pokemonList.push(pokemon);
+  }
+
+  function getAll() {
+    return pokemonList;
+  }
+
+  return {
+    add: add,
+    getAll: getAll,
+  };
+})();
+
+console.log(pokemonRepository.getAll());
+
+pokemonRepository.add({ name: 'Chase' });
+console.log(pokemonRepository.getAll());
+
+pokemonRepository.getAll().forEach(function (pokemon) {
   if (pokemon.height > 8) {
     document.write(
       '<p>' +
