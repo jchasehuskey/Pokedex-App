@@ -8,3 +8,10 @@ POKEDEX APPl
 - Created IIFE and put PokemonList array inside of IIFE to secure code. Also assigned variable- pokemonrepository to IIFE to allow outside functions to call it.
 - Replaced for Loop w/ a forEach Loop.
 - Updated forEach Loop to allow the loop to retrieve data from inside the IIFE repository.
+
+Updated IIFE by adding a function "addListItem" that creates list items for the unordered list in HTML and also appends buttons to each list item.
+-Added event listener to the appended button- that when clicked- would call the function "showDetails".
+
+Created function called "showDetails" that logged data to console when called.
+
+Updated button and body styling in CSS.
