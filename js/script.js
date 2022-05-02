@@ -102,7 +102,7 @@
 // });
 
 let pokemonRepository = (function () {
-  let pokemonList = [
+  let repository = [
     { name: 'Charzard', height: 0.6, type: ['Blaze', 'Solar-Power'] },
 
     { name: 'Onix', height: 8.8, type: ['Sturdy', 'Rock-head', 'Weak-armor'] },
@@ -119,16 +119,35 @@ let pokemonRepository = (function () {
   ];
 
   function add(pokemon) {
-    pokemonList.push(pokemon);
+    repository.push(pokemon);
   }
 
   function getAll() {
-    return pokemonList;
+    return repository;
+  }
+
+  let showDetails = function (pokemon) {
+    console.log(pokemon);
+  };
+
+  function addListItem(pokemon) {
+    let pokemonList = document.querySelector('.pokemon-list');
+    let listPokemon = document.createElement('li');
+    let button = document.createElement('button');
+    button.innerText = pokemon.name;
+    button.classList.add('button-class');
+    listPokemon.appendChild(button);
+    pokemonList.appendChild(listPokemon);
+    button.addEventListener('click', function (event) {
+      let target = event.target;
+      showDetails(pokemon.name);
+    });
   }
 
   return {
     add: add,
     getAll: getAll,
+    addListItem: addListItem,
   };
 })();
 
@@ -138,16 +157,5 @@ pokemonRepository.add({ name: 'Chase' });
 console.log(pokemonRepository.getAll());
 
 pokemonRepository.getAll().forEach(function (pokemon) {
-  if (pokemon.height > 8) {
-    document.write(
-      '<p>' +
-        pokemon.name +
-        ' (height: ' +
-        pokemon.height +
-        ') ' +
-        "-Wow that's big!"
-    );
-  } else {
-    document.write('<p>' + pokemon.name + ' (height: ' + pokemon.height + ') ');
-  }
+  pokemonRepository.addListItem(pokemon);
 });
