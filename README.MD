@@ -15,3 +15,11 @@ Updated IIFE by adding a function "addListItem" that creates list items for the 
 Created function called "showDetails" that logged data to console when called.
 
 Updated button and body styling in CSS.
+
+added URL to API inside IIFE to retrieve pokemon. linked it by fetching with function loadList(). Used Promises inside of loadList that returned response.json. Used promise to deliver forEach function to display pokemon name & details. And the added pokemon.
+
+Also added loadDetails function to fetch details from the url. This returns item.image for the pokemon. Also displays error if promise is not fulfilled.
+
+Updated and wrapped forEach function outside of IIFE function into another function pokemonRepository.loadList().then(function(){.
+
+Added fetch.polyfill.js and promise-polyfills.js to account for browser support.
