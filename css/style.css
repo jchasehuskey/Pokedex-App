@@ -10,6 +10,10 @@ body {
   /* need to add some blur to border, look up how to do it */
 }
 
+.pokemon-list {
+  list-style: none;
+}
+
 .button-class {
   padding: 16px 32px;
   background-color: #ffd8a8;
@@ -22,6 +26,7 @@ body {
   border: 2px solid #754f1edd;
   border: 2px solid #000;
   border-radius: 9px;
+  list-style-type: none;
 }
 
 .button-class:hover {
@@ -30,4 +35,110 @@ body {
   background-color: #ffa94d;
   color: #fff;
   font-weight: bold;
+}
+
+.input-wrapper {
+  margin-bottom: 10px;
+}
+
+label {
+  display: inline-block;
+  min-width: 75px;
+}
+
+.error-message {
+  color: red;
+  font-size: 0.8em;
+}
+
+/* MODAL */
+
+#modal-container {
+  /* background-color: red; */
+  /* padding: 20px;
+  box-sizing: border-box;
+
+  text-align: center; */
+
+  /* z-index: 999; */
+  /* to show above other content */
+
+  /* overflow: auto; */
+  /* to allow scrolling if screen is not high enough */
+
+  display: none;
+}
+
+#modal-container.is-visible {
+  /* display: block; */
+
+  /* below is new */
+  position: fixed;
+  text-align: center;
+  display: grid;
+  margin: 0 auto;
+
+  /* display: grid; */
+  z-index: 999;
+  padding: 20px;
+  box-sizing: border-box;
+  width: 100%;
+
+  /* Only shows Modal above if it has the .is-visible class */
+}
+
+.modal {
+  margin: 0 auto;
+  display: inline-block;
+  background-color: #333;
+  padding: 15px;
+  width: 100%;
+  max-width: 700px;
+  text-align: left;
+  border-radius: 9px;
+}
+
+.modal-close {
+  float: right;
+  border: 0;
+  background: none;
+  color: #ffa94d;
+  text-decoration: underline;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.modal-close:hover {
+  color: #cc873e;
+  transition: 500ms;
+  /* color: #fff; */
+}
+
+.modal h1 {
+  margin-top: 0;
+  color: #ffa94d;
+}
+
+.modal p {
+  margin-top: 12px;
+
+  font-weight: bold;
+  font-size: 18px;
+  border: 1px solid #000;
+  display: inline-block;
+  margin-left: 20px;
+  padding: 4px 8px;
+  color: rgb(220, 219, 219);
+  background-color: #cc873e;
+  border-radius: 9px;
+}
+
+.modal img {
+  width: 20%;
+  /* border: 1px solid #000; */
+  background-color: #333;
+  box-shadow: 0px 0px 12px 24px #ffa94d27;
+  border-radius: 9px;
+
+  box-shadow: 0 10px 30px #ffa94d13;
 }
