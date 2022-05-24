@@ -142,3 +142,12 @@ label {
 
   box-shadow: 0 10px 30px #ffa94d13;
 }
+
+.flash {
+  color: #ffa94d;
+  background-color: red;
+}
+
+.bright-red {
+  color: #ffa94d;
+}
