@@ -25,3 +25,5 @@ Updated and wrapped forEach function outside of IIFE function into another funct
 Added fetch.polyfill.js and promise-polyfills.js to account for browser support.
 
 Appended new js elements to index and created a modal. Included forLoop funciton to display pokemon type. Retrieved img from API. Also added event listeners to close the modal when specific keys are areas are clicked (escape) & right outside of the modal. Created close-button to close modal. Updated CSS to style elements.
+
+Updated index.html. Added bootstrap Nav bar and Modal. Selected elements in script.js using JQuery and appended them to newly created button - that consists of click event to run the showModal();. Added input filter function using form on navbar and created function to filter input and display pokemon (filterPokemon()) if available using list.each(function().
