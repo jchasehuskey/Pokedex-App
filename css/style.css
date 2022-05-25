@@ -2,6 +2,10 @@ body {
   background-color: rgba(51, 51, 51, 0.888);
 }
 
+.container {
+  margin-top: 120px;
+}
+
 .main-header {
   padding: 8px 16px;
   background-color: #ffa94d51;
@@ -14,12 +18,18 @@ body {
   list-style: none;
 }
 
+.modal-body img {
+  /* display: block; */
+  width: 100;
+  height: auto;
+}
+
 .button-class {
   padding: 16px 32px;
   background-color: #ffd8a8;
   text-align: center;
   text-decoration: none;
-  display: inline-block;
+  /* display: inline-block; */
   font-size: 16px;
   margin: 4px 2px;
   cursor: pointer;
@@ -27,6 +37,7 @@ body {
   border: 2px solid #000;
   border-radius: 9px;
   list-style-type: none;
+  color: #000;
 }
 
 .button-class:hover {
@@ -53,49 +64,20 @@ label {
 
 /* MODAL */
 
-#modal-container {
-  /* background-color: red; */
-  /* padding: 20px;
-  box-sizing: border-box;
-
-  text-align: center; */
-
-  /* z-index: 999; */
-  /* to show above other content */
-
-  /* overflow: auto; */
-  /* to allow scrolling if screen is not high enough */
-
-  display: none;
-}
-
-#modal-container.is-visible {
-  /* display: block; */
-
-  /* below is new */
-  position: fixed;
-  text-align: center;
-  display: grid;
-  margin: 0 auto;
-
-  /* display: grid; */
-  z-index: 999;
-  padding: 20px;
-  box-sizing: border-box;
-  width: 100%;
-
-  /* Only shows Modal above if it has the .is-visible class */
-}
-
 .modal {
   margin: 0 auto;
-  display: inline-block;
-  background-color: #333;
+
+  display: none;
+
   padding: 15px;
   width: 100%;
-  max-width: 700px;
+
   text-align: left;
   border-radius: 9px;
+}
+
+.modal-content {
+  background-color: rgb(90, 90, 90);
 }
 
 .modal-close {
@@ -131,6 +113,7 @@ label {
   color: rgb(220, 219, 219);
   background-color: #cc873e;
   border-radius: 9px;
+  /* width: 30%; */
 }
 
 .modal img {
@@ -140,14 +123,7 @@ label {
   box-shadow: 0px 0px 12px 24px #ffa94d27;
   border-radius: 9px;
 
-  box-shadow: 0 10px 30px #ffa94d13;
-}
-
-.flash {
-  color: #ffa94d;
-  background-color: red;
-}
-
-.bright-red {
-  color: #ffa94d;
+  box-shadow: 0 10px 30px #ffa94d26;
+  width: 20%;
+  height: auto;
 }

@@ -1,6 +1,8 @@
 let pokemonRepository = (function () {
   let pokemonList = [];
   let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=150';
+  let input = $('input');
+  input.on('input', filterPokemon);
 
   function getAll() {
     return pokemonList;
@@ -10,17 +12,18 @@ let pokemonRepository = (function () {
     pokemonList.push(pokemon);
   }
 
-  function addListItem(pokemon) {
+  function addListItem(pokemon, idx) {
     let ul = document.querySelector('ul');
     let listItem = document.createElement('li');
-    listItem.classList.add('col-sm-8');
+    // listItem.classList.add('col-4');
     let button = document.createElement('button');
     button.innerText = pokemon.name;
     button.classList.add('button-class');
-    addEvent(button, pokemon);
+    // addEvent(button, pokemon);
     button.addEventListener('click', (event) => {
       showDetails(pokemon);
       event.target.blur();
+      console.log(pokemon);
     });
 
     //classes and attributes to button
@@ -39,6 +42,7 @@ let pokemonRepository = (function () {
   function addEvent(button, pokemon) {
     button.addEventListener('click', function () {
       showDetails(pokemon);
+      console.log(pokemon);
     });
   }
 
@@ -92,6 +96,21 @@ let pokemonRepository = (function () {
       });
   }
 
+  function filterPokemon() {
+    let inputValue = $('input').val();
+    let list = $('li');
+
+    list.each(function () {
+      let item = $(this);
+      let name = item.text();
+      if (name.startsWith(inputValue)) {
+        item.show();
+      } else {
+        item.hide();
+      }
+    });
+  }
+
   function loadDetails(item) {
     let url = item.detailsUrl;
     return fetch(url)
@@ -118,13 +137,14 @@ let pokemonRepository = (function () {
     addEvent: addEvent,
     loadList: loadList,
     loadDetails: loadDetails,
+    filterPokemon: filterPokemon,
   };
 })();
 
 console.log(pokemonRepository.getAll());
 
 pokemonRepository.loadList().then(function () {
-  pokemonRepository.getAll().forEach(function (pokemon) {
-    pokemonRepository.addListItem(pokemon);
+  pokemonRepository.getAll().forEach(function (pokemon, idx) {
+    pokemonRepository.addListItem(pokemon, idx);
   });
 });
