@@ -1,35 +1,57 @@
 body {
   background-color: rgba(51, 51, 51, 0.888);
+  background-color: #5f3dc4;
 }
-
+.main-content {
+  background-color: #5f3dc4;
+}
 .container {
-  margin-top: 120px;
+  margin-top: 160px;
 }
-
 .main-header {
   padding: 8px 16px;
   background-color: #ffa94d51;
   border-radius: 9px;
   display: inline-block;
-  /* need to add some blur to border, look up how to do it */
 }
-
+.social-media {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 10px;
+}
+.social-media img {
+  width: 60%;
+  margin-top: 30px;
+  border: 1px solid #5f3dc4;
+  padding: 5px;
+  background-color: #cc873e;
+  border-radius: 9px;
+  transition: 0.5s;
+  background-color: #5f3dc4;
+}
+.social-media img:hover {
+  width: 60%;
+  margin-top: 30px;
+  border: 1px solid #e031316f;
+  padding: 5px;
+  background-color: #cc873eb1;
+  border-radius: 9px;
+  background-color: #e031316f;
+}
+.social-media p {
+  color: #fff;
+}
 .pokemon-list {
   list-style: none;
+  padding-right: 0;
 }
-
-.modal-body img {
-  /* display: block; */
-  width: 100;
-  height: auto;
-}
-
 .button-class {
   padding: 16px 32px;
   background-color: #ffd8a8;
+  background-color: #5f3dc4;
   text-align: center;
   text-decoration: none;
-  /* display: inline-block; */
   font-size: 16px;
   margin: 4px 2px;
   cursor: pointer;
@@ -37,93 +59,63 @@ body {
   border: 2px solid #000;
   border-radius: 9px;
   list-style-type: none;
-  color: #000;
-}
-
-.button-class:hover {
-  transform: scale(1.05);
-  transition: all 200ms;
-  background-color: #ffa94d;
   color: #fff;
-  font-weight: bold;
+  display: block;
+  width: 350px;
+  height: 200px;
+  font-weight: 700;
+  font-size: 24px;
 }
-
+.button-class:hover {
+  transform: scale(1.02);
+  transition: all 0.4s;
+  background-color: #ffa94d;
+  background-color: #e03131;
+  color: #fff;
+  font-weight: 700;
+  border: 1px solid #e03131;
+}
 .input-wrapper {
   margin-bottom: 10px;
 }
-
-label {
-  display: inline-block;
-  min-width: 75px;
-}
-
-.error-message {
-  color: red;
-  font-size: 0.8em;
-}
-
-/* MODAL */
-
 .modal {
   margin: 0 auto;
-
   display: none;
-
   padding: 15px;
   width: 100%;
-
   text-align: left;
   border-radius: 9px;
 }
-
 .modal-content {
-  background-color: rgb(90, 90, 90);
+  background-color: #5a5a5a;
 }
-
-.modal-close {
-  float: right;
-  border: 0;
-  background: none;
-  color: #ffa94d;
-  text-decoration: underline;
-  font-size: 16px;
-  cursor: pointer;
-}
-
-.modal-close:hover {
-  color: #cc873e;
-  transition: 500ms;
-  /* color: #fff; */
-}
-
 .modal h1 {
   margin-top: 0;
   color: #ffa94d;
 }
-
 .modal p {
   margin-top: 12px;
-
-  font-weight: bold;
+  font-weight: 700;
   font-size: 18px;
   border: 1px solid #000;
   display: inline-block;
   margin-left: 20px;
   padding: 4px 8px;
-  color: rgb(220, 219, 219);
+  color: #dcdbdb;
   background-color: #cc873e;
   border-radius: 9px;
-  /* width: 30%; */
 }
-
 .modal img {
   width: 20%;
-  /* border: 1px solid #000; */
   background-color: #333;
-  box-shadow: 0px 0px 12px 24px #ffa94d27;
+  box-shadow: 0 0 12px 24px #ffa94d27;
   border-radius: 9px;
-
   box-shadow: 0 10px 30px #ffa94d26;
   width: 20%;
   height: auto;
+}
+@media all and (max-width: 514px) {
+  .container {
+    margin-top: 200px;
+  }
 }

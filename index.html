@@ -11,12 +11,19 @@
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="dist/stylesheetdist.css"/>
   </head>
   
     <nav class="navbar navbar-dark bg-dark fixed-top">
       <h1 class="main-header">Pokedex</h1>
       <!-- <a class="navbar-brand nav-link col-6 " href="https://pokemon.gameinfo.io/" target="#">More Pokemon Data</a> -->
+      <div class="social-media">
+        <a href="https://github.com/jchasehuskey" target="blank">
+          <img src="img/iconmonstr-github-1.svg" alt="github" >
+        </a>
+      
+        <p>my github</p>
+      </div>
       <form class="form-inline">
         <input
           class="form-control"
@@ -30,7 +37,8 @@
     </nav>
    
 
-
+<main>
+  <div class="main-content">
     <!-- Modal -->
     <div class="modal fade" id="pokemonModal" tabindex="-1" role="dialog">
       <div class="modal-dialog" role="document">
@@ -51,13 +59,18 @@
       </div>
     </div>
 
-    <div class="container text-center">
+    <div class=" container ">
+      <div class="row">
+      
       <ul
-        class="pokemon-list row"
+        class="list-group list-unstyled pokemon-list flex-row flex-wrap justify-content-center col-lg-12  "
         data-toggle="modal"
         data-target="#pokemonModal"
       ></ul>
     </div>
+    </div>
+  </div>
+  </main>
 
     <script
       src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
@@ -74,8 +87,8 @@
       integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
       crossorigin="anonymous"
     ></script>
-    <script src="js/promise-polyfill.js"></script>
-    <script src="js/fetch.polyfill.js"></script>
-    <script src="js/script.js"></script>
+    <script src="dist/promise-polyfill.js"></script>
+    <script src="dist/fetch.polyfill.js"></script>
+    <script src="dist/scriptdist.js""></script>
   </body>
 </html>

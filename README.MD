@@ -1,6 +1,14 @@
-POKEDEX APPl
+POKEDEX APP
 
--Created array (pokemonList) with 5 objects, (each object includes: name,height, and styles.
+Pokemon-app displays pokemons fetched data from the pokeAPI: https://pokeapi.co/. When a pokemone element is clicked, displays more dtails about the particular pokemon using a modal.
+
+Tools used:
+
+Javascript, HTML, CSS, Bootstrap
+
+Steps to build application:
+
+-Created array (pokemonList) with multiple objects, (each object includes: name, height, and styles.
 
 -Created for loop to display names and height of pokemon.  
 -Added condition to for loop to display "wow that's big" on the tallest pokemon.
