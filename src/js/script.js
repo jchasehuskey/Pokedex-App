@@ -12,7 +12,7 @@ let pokemonRepository = (function () {
     pokemonList.push(pokemon);
   }
 
-  function addListItem(pokemon, idx) {
+  function addListItem(pokemon, index) {
     let ul = document.querySelector('ul');
     let listItem = document.createElement('li');
     // listItem.classList.add('col-4');
@@ -144,7 +144,7 @@ let pokemonRepository = (function () {
 console.log(pokemonRepository.getAll());
 
 pokemonRepository.loadList().then(function () {
-  pokemonRepository.getAll().forEach(function (pokemon, idx) {
-    pokemonRepository.addListItem(pokemon, idx);
+  pokemonRepository.getAll().forEach(function (pokemon, index) {
+    pokemonRepository.addListItem(pokemon, index);
   });
 });
