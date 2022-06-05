@@ -12,7 +12,7 @@ let pokemonRepository = (function () {
     pokemonList.push(pokemon);
   }
 
-  function addListItem(pokemon, index) {
+  function addListItem(pokemon) {
     let ul = document.querySelector('ul');
     let listItem = document.createElement('li');
     // listItem.classList.add('col-4');
@@ -61,7 +61,7 @@ let pokemonRepository = (function () {
     //create pokemon elements
     let pokemonName = $(`<h1>${pokemon.name}</h1>`);
     let pokemonHeight = $('<p>' + 'Height: ' + pokemon.height + '</p>');
-    let imgElement = $("<img class='pokemon-modal-image'>");
+    let imgElement = $('<img class=\'pokemon-modal-image\'>');
     imgElement.attr('src', pokemon.imageUrl);
     let pokemonTypes = $(`<p>Types: ${pokemon.types.join(', ')}</p>`);
 
