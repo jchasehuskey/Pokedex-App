@@ -2,9 +2,9 @@
 
 ---
 
-##Pokemon-app displays pokemons fetched data from the pokeAPI: https://pokeapi.co/. When a pokemone element is clicked, displays more dtails about the particular pokemon using a modal.
+## Pokemon-app displays pokemons fetched data from the pokeAPI: https://pokeapi.co/. When a pokemone element is clicked, displays more dtails about the particular pokemon using a modal.
 
-##Live Link: https://jchasehuskey.github.io/Pokedex-App/
+## Live Link: https://jchasehuskey.github.io/Pokedex-App/
 
 ## Tools used:
 
