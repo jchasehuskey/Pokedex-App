@@ -1,37 +1,49 @@
-POKEDEX APP
+# POKEDEX APP
 
-Pokemon-app displays pokemons fetched data from the pokeAPI: https://pokeapi.co/. When a pokemone element is clicked, displays more dtails about the particular pokemon using a modal.
+---
 
-Tools used:
+##Pokemon-app displays pokemons fetched data from the pokeAPI: https://pokeapi.co/. When a pokemone element is clicked, displays more dtails about the particular pokemon using a modal.
+
+##Live Link: https://jchasehuskey.github.io/Pokedex-App/
+
+## Tools used:
 
 Javascript, HTML, CSS, Bootstrap
 
-Steps to build application:
+---
 
--Created array (pokemonList) with multiple objects, (each object includes: name, height, and styles.
+## Getting Started: 
 
--Created for loop to display names and height of pokemon.  
--Added condition to for loop to display "wow that's big" on the tallest pokemon.
+Create a GithHub account if you dont't have one and fork my repository. Then on GitHub go to your forked repository and under the Settings -> Pages -> Build and deployment -> Branch choose the master branch and Save. After a minute you can check your live copy of my app.
 
-- Created IIFE and put PokemonList array inside of IIFE to secure code. Also assigned variable- pokemonrepository to IIFE to allow outside functions to call it.
-- Replaced for Loop w/ a forEach Loop.
-- Updated forEach Loop to allow the loop to retrieve data from inside the IIFE repository.
+Or, just clone the repository into your webserver's root directory on any hosting provider: https://github.com/jchasehuskey/Pokedex-App.git
 
-Updated IIFE by adding a function "addListItem" that creates list items for the unordered list in HTML and also appends buttons to each list item.
--Added event listener to the appended button- that when clicked- would call the function "showDetails".
+## Key Features: 
 
-Created function called "showDetails" that logged data to console when called.
 
-Updated button and body styling in CSS.
+* Load data from an external source (API:https://pokeapi.co/docs/v2)
+* View all loaded Pokemon through individual cards on a responsive webpage
+* Each card includes a button to load more details about the Pokemon
+* Live search among the loaded Pokemons
+* Loading indicator during data fetching
+* On devices with touchscreen swiping between items on the modal
 
-added URL to API inside IIFE to retrieve pokemon. linked it by fetching with function loadList(). Used Promises inside of loadList that returned response.json. Used promise to deliver forEach function to display pokemon name & details. And the added pokemon.
 
-Also added loadDetails function to fetch details from the url. This returns item.image for the pokemon. Also displays error if promise is not fulfilled.
+## Dependencies
 
-Updated and wrapped forEach function outside of IIFE function into another function pokemonRepository.loadList().then(function(){.
+All dependencies are included in the code, no need to install anything else.
 
-Added fetch.polyfill.js and promise-polyfills.js to account for browser support.
+Bootstrap 5.2.2 is used for the user interface elements. This version of Bootstrap does not require jQuery.
+The PokeAPI is used by the project.
 
-Appended new js elements to index and created a modal. Included forLoop funciton to display pokemon type. Retrieved img from API. Also added event listeners to close the modal when specific keys are areas are clicked (escape) & right outside of the modal. Created close-button to close modal. Updated CSS to style elements.
 
-Updated index.html. Added bootstrap Nav bar and Modal. Selected elements in script.js using JQuery and appended them to newly created button - that consists of click event to run the showModal();. Added input filter function using form on navbar and created function to filter input and display pokemon (filterPokemon()) if available using list.each(function().
+## Code and Quality:
+
+* Javascript Minifier is used to remove unnecessary pieces of the file to decrease its file size.
+* Performance was checked with Chrome developer tools on different network speeds and different CPU speeds. In the case of recursive functions, the innerHTML and document.write() commands were replaced by specific DOM manipulation commands like classList.add, innerText, appendchild, etc.
+* ESLint was used for code quality and Prettier for code formatting.
+* The app was tested on different screen sizes with Chrome developer tools.
+
+
+
+
